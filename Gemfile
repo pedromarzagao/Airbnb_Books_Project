@@ -1,6 +1,9 @@
 source 'https://rubygems.org'
 ruby '2.4.4'
 
+# Install Gem Devise
+gem 'devise'
+
 gem 'bootsnap', require: false
 gem 'figaro'
 gem 'jbuilder', '~> 2.0'
