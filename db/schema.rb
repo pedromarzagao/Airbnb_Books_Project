@@ -17,6 +17,8 @@ ActiveRecord::Schema.define(version: 2018_05_28_162320) do
 
   create_table "bookings", force: :cascade do |t|
     t.boolean "paid"
+    t.text "review"
+    t.integer "rating"
     t.datetime "date_begin"
     t.datetime "date_end"
     t.integer "price"
