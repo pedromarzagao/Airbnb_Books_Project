@@ -2,6 +2,8 @@ class CreateBookings < ActiveRecord::Migration[5.2]
   def change
     create_table :bookings do |t|
       t.boolean :paid
+      t.text :review
+      t.integer :rating
       t.datetime :date_begin
       t.datetime :date_end
       t.integer :price
