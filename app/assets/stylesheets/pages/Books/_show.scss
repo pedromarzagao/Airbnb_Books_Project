@@ -1,0 +1,92 @@
+.book-banner {
+  height: 500px;
+}
+
+// Master Container
+
+.master {
+  .container {
+  display: flex;
+  }
+}
+
+// Book Details
+
+.book-details-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.book-details {
+  display: block;
+  text-align: start;
+  padding: 10px;
+}
+
+.book-details-top-section {
+
+}
+
+.book-details-title {
+  h1 {
+    font-size: 44px;
+  }
+}
+
+.book-details-category {
+  h3 {
+    font-size: 16px;
+  }
+}
+
+.book-details-rating {
+
+}
+
+.book-details-bottom-section {
+
+}
+
+.book-details-summary {
+  p {
+    font-size: 16px;
+  }
+}
+
+.book-owner {
+  display: flex;
+  padding: 10px;
+  .owner-avatar-box {
+    display:flex;
+    flex-direction: column;
+    padding: 10px;
+
+    .owner-name {
+    font-size: 10px;
+    text-align: center;
+    margin-top: 10px;
+    }
+
+    .owner-avatar {
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+  }
+  }
+
+}
+
+.book-owner-details {
+  padding: 10px;
+  .owner-bio {
+    text-align: left;
+    font-size: 16px;
+  }
+}
+
+// Booking Details
+
+
+.booking-details {
+  flex: 0 0 450px;
+}
