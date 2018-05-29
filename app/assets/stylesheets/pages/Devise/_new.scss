@@ -1,0 +1,45 @@
+.form-box {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px;
+  margin-top: -50px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+
+    h1 {
+      font-size: 44px;
+      margin-bottom: 25px;
+      margin-top: 50px;
+    }
+
+    label {
+      font-size: 16px;
+    }
+
+    #user_remember_me {
+      margin-right: 10px;
+    }
+
+
+
+    .extra-links {
+      display: block;
+      margin-top: 20px;
+        a {
+          font-size: 12px;
+        }
+    }
+}
+
+.wide-button {
+  width: 100%;
+}
+
+.book-logo {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.text-muted {
+  font-size: 10px;
+}
