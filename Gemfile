@@ -4,6 +4,8 @@ ruby '2.4.4'
 # Install Gem Devise
 gem 'devise'
 
+gem "geocoder"
+
 gem 'bootsnap', require: false
 gem 'figaro'
 gem 'jbuilder', '~> 2.0'
