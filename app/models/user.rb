@@ -6,6 +6,6 @@ class User < ApplicationRecord
   has_many :books
   has_many :bookings
 
-
+  mount_uploader :picture, PhotoUploader
   #fhwehfioehfiwhf
 end
