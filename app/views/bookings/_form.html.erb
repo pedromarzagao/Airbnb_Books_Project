@@ -1,0 +1,11 @@
+<%= simple_form_for(@booking) do |f| %>
+  <%= render partial: 'shared/form_errors', locals: { model: @booking } %>
+  <%= f.input :review %>
+  <%= f.input :rating %>
+  <%#= f.input :photo %>
+ <%#= f.input :photo_cache, as: :hidden %>
+  <%= f.submit "Add a booking", class: "btn btn-primary" %>
+<% end %>
+
+
+
