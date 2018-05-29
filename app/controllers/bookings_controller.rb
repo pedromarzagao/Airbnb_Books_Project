@@ -1,4 +1,5 @@
 class BookingsController < ApplicationController
+  before_action :set_book
 
   def show
     @booking = Booking.find(params[:id])
@@ -11,6 +12,7 @@ class BookingsController < ApplicationController
   def create
     @booking = Booking.new(booking_params)
     @booking.user = current_user
+    @booking.book = @book
 
     if @booking.save
       redirect_to booking_path(@booking)
@@ -20,6 +22,10 @@ class BookingsController < ApplicationController
   end
 
   private
+
+  def set_book
+    @book = Book.find(params[:book_id])
+  end
 
   def booking_params
     params.require(:booking).permit(:review, :rating)
