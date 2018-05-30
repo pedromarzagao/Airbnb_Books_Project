@@ -1,16 +1,22 @@
-<h1 class="text-center"> All of our <%=@books.length %> super amazing books </h1>
+<div class="container">
+  <div class="row">
+    <div class="index-title">
+        <p> All of our <%=@books.length %> super amazing books </p>
+    </div>
+  </div>
+</div>
 
 <div class="content">
-  <div class="cards-container">
+  <div class="cards-container container">
    <div class="row">
     <% @books.each do |book| %>
       <div class="col-xs-12 col-sm-6 col-md-4">
-        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
-          <div class="card-category">Popular</div>
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.5)), url('<%= cl_image_path book.picture %> ');">
+          <div class="card-category"><%= book.category %></div>
           <div class="card-description">
           <h2 ><%= book.title %></h2>
           </div>
-          <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/andreiadomz">
+          <img class="card-user" src="<%= cl_image_path book.user.picture %>">
           <%= link_to 'Show book', book, class: "card-link" %>
         </div>
       </div>
