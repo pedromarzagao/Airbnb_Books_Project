@@ -4,10 +4,15 @@
 
 // Master Container
 
-.master {
-  .container {
+.book-container {
   display: flex;
-  }
+}
+
+
+// Book Box
+
+.book-box {
+  height: 800px;
 }
 
 // Book Details
@@ -87,6 +92,18 @@
 // Booking Details
 
 
-.booking-details {
+.book-booking {
+  display: flex;
+  flex-direction: column;
   flex: 0 0 450px;
+  margin-top: 113px;
+  .book-booking-form {
+    height: 300px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+    margin-bottom: 20px;
+  }
+  .book-booking-box {
+    display: flex;
+    flex-direction: column;
+  }
 }
