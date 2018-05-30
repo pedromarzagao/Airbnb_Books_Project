@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <div class="index-title">
-      <p><span align="center">All of our <%=@books.length %> super amazing books and </span><span> <input type="text" name="query" id="query" placeholder="in the mood for..."></span></p>
+      <p><span align="center">All of our <%=@books.length %> super amazing books and </span><span> <input type="text" name="query" id="query" placeholder="in the mood for..."> </span> <span><input type=”submit” value=Search class="btn btn-primary"></span></p>
     </div>
   </div>
 </div>
@@ -9,18 +9,25 @@
 <div class="content">
   <div class="cards-container container">
    <div class="row">
-    <% @books.each do |book| %>
-      <div class="col-xs-12 col-sm-6 col-md-4">
-        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.5)), url('<%= cl_image_path book.picture %> ');">
-          <div class="card-category"><%= book.category %></div>
-          <div class="card-description">
-          <h2 ><%= book.title %></h2>
+
+    <%# if query = " " %>
+
+      <% @books.each do |book| %>
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.5)), url('<%= cl_image_path book.picture %> ');">
+            <div class="card-category"><%= book.category %></div>
+            <div class="card-description">
+            <h2 ><%= book.title %></h2>
+            </div>
+            <img class="card-user" src="<%= cl_image_path book.user.picture%>">
+            <%= link_to 'Show book', book, class: "card-link" %>
           </div>
-          <img class="card-user" src="<%= cl_image_path book.user.picture%>">
-          <%= link_to 'Show book', book, class: "card-link" %>
         </div>
-      </div>
-    <% end  %>
+      <% end  %>
+
+      <%# else %>
+      <%# @results.each do |book| %>
+        <!-- place same than above -->
   </div>
 
 </div>
