@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 2018_05_30_100617) do
   enable_extension "plpgsql"
 
   create_table "bookings", force: :cascade do |t|
-    t.boolean "paid"
+    t.boolean "paid", default: false
     t.text "review"
     t.integer "rating"
     t.datetime "date_begin"
