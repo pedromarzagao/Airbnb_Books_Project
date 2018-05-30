@@ -17,7 +17,7 @@
                       <h1><%= @book.title %></h1>
                     </div>
                     <div class="book-details-category">
-                      <h3>Fiction</h3>
+                      <h3>@book.category</h3>
                     </div>
                     <div class="book-details-rating">
 
@@ -31,14 +31,14 @@
               </div>
               <div class="book-owner">
                 <div class="owner-avatar-box">
-                  <%= image_tag "logo.png", height: 50, class:"owner-avatar" %>
+                  <%= cl_image_path @book.user_id.picture, class: "owner-avatar"%>
                   <div class="owner-name">
-                      <p>Jerôme's book</p>
+                      <p><%= @book.user_id.name %></p>
                   </div>
                 </div>
                 <div class="book-owner-details">
                     <div class="owner-bio">
-                      <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>
+                      <p><%= @book.user_id.bio %></p>
                     </div>
                 </div>
               </div>
