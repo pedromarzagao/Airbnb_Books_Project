@@ -1,5 +1,7 @@
 .book-banner {
   height: 500px;
+  background-size: cover;
+  background-repeat: no;
 }
 
 // Master Container
@@ -20,12 +22,19 @@
 .book-details-container {
   display: flex;
   justify-content: space-around;
+  margin-right:40px;
+}
+
+.book-owner-title {
+  font-size: 14px;
+  padding: 10px 20px 0 10px;
 }
 
 .book-details {
   display: block;
   text-align: start;
   padding: 10px;
+  margin-bottom: 40px;
 }
 
 .book-details-top-section {
@@ -61,10 +70,11 @@
 .book-owner {
   display: flex;
   padding: 10px;
+  margin-right: 10px;
   .owner-avatar-box {
     display:flex;
-    flex-direction: column;
     padding: 10px;
+    flex-direction:column;
 
     .owner-name {
     font-size: 10px;
@@ -85,7 +95,7 @@
   padding: 10px;
   .owner-bio {
     text-align: left;
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 
