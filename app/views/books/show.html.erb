@@ -1,7 +1,7 @@
 <div class="wrapper">
   <div class="containe-flow">
     <div class="row">
-      <div class="book-banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('')">
+      <div class="book-banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('<%= cl_image_path @book.picture%>')">
       </div>
     </div>
   </div>
@@ -17,7 +17,7 @@
                       <h1><%= @book.title %></h1>
                     </div>
                     <div class="book-details-category">
-                      <h3>@book.category</h3>
+                      <h3><%= @book.category %></h3>
                     </div>
                     <div class="book-details-rating">
 
@@ -31,14 +31,14 @@
               </div>
               <div class="book-owner">
                 <div class="owner-avatar-box">
-                  <%= cl_image_path @book.user_id.picture, class: "owner-avatar"%>
+                  <%= cl_image_tag @book.user.picture, class: "owner-avatar"%>
                   <div class="owner-name">
-                      <p><%= @book.user_id.name %></p>
+                      <p><%= @book.user.name %></p>
                   </div>
                 </div>
                 <div class="book-owner-details">
                     <div class="owner-bio">
-                      <p><%= @book.user_id.bio %></p>
+
                     </div>
                 </div>
               </div>
