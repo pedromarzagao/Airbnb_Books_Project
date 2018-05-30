@@ -1,6 +1,14 @@
 class BooksController < ApplicationController
   def index
-    @books = Book.all
+    @books = Book.where.not(latitude: nil, longitude: nil)
+
+    @markers = @books.map do |book|
+      {
+        lat: book.latitude,
+        lng: book.longitude#,
+        # infoWindow: { content: render_to_string(partial: "/flats/map_box", locals: { flat: flat }) }
+      }
+    end
   end
 
   def new
