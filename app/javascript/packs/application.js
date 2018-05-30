@@ -8,7 +8,7 @@ import initDate from '../components/datepickr'
 const mapElement = document.getElementById('map');
 initMap(mapElement);
 
-const startDateinput = document.getElementById('crawl_start_date');
-const endDateinput = document.getElementById('crawl_end_date');
+const startDateinput = document.getElementById('booking_date_begin');
+const endDateinput = document.getElementById('booking_date_end');
 initDate(startDateinput, endDateinput);
 

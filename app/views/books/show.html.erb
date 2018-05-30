@@ -51,12 +51,7 @@
         </div>
 
       <div class="book-booking">
-        <div class="book-booking-form">
-
-        </div>
-        <div class="book-booking-box">
-          <%= link_to 'Book it!', new_book_booking_path(@book), class: "btn btn-danger"%>
-        </div>
+          <%= render 'formdate', booking: @booking %>
       </div>
 
   </div>
