@@ -29,16 +29,19 @@
                   </div>
                 </div>
               </div>
+              <div class="book-owner-title">
+                <p>Book Owner</p>
+              </div>
               <div class="book-owner">
                 <div class="owner-avatar-box">
-                  <%= cl_image_tag @book.user.picture, class: "owner-avatar"%>
+                  <%= cl_image_tag @book.user.picture, class: "owner-avatar", height: 60, width: 60, crop: :fill%>
                   <div class="owner-name">
-                      <p><%= @book.user.owner_bio %></p>
+                      <p><%= @book.user.name %></p>
                   </div>
                 </div>
                 <div class="book-owner-details">
                     <div class="owner-bio">
-
+                      <p><%= @book.user.owner_bio %></p>
                     </div>
                 </div>
               </div>
