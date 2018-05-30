@@ -12,10 +12,30 @@ User.destroy_all
 
 puts "Finished cleaning"
 
-user1 = User.create!(email:"andreiadomingues@gmail.com", password:"123456", name:"Andreia Domingues",owner_bio:"Andreia is a former journalist who has interviewed murderers on death row, flown over L.A. with the LAPD and patrolled with the Royal Canadian Mounted Police near the Arctic. He’s also reported from the Caribbean, Africa and Kuwait’s border with Iraq. His books have been published in nearly 30 countries, including an illegal translation produced in Iran.", remote_picture_url: "http://res.cloudinary.com/pmarzagao/image/upload/v1527683260/8GaEWuxK_400x400.jpg")
-user2 = User.create!(email:"jeromedharveng@gmail.com", password:"123456", name: "Jerome Harveng",owner_bio:"Jerome is a former journalist who has interviewed murderers on death row, flown over L.A. with the LAPD and patrolled with the Royal Canadian Mounted Police near the Arctic. He’s also reported from the Caribbean, Africa and Kuwait’s border with Iraq. His books have been published in nearly 30 countries, including an illegal translation produced in Iran.", remote_picture_url:"http://res.cloudinary.com/pmarzagao/image/upload/v1527684917/image_2.png")
-user3 = User.create!(email:"pedromarzagao@gmail.com", password:"123456", name: "Pedro Marzagão",owner_bio:"Pedro is a former journalist who has interviewed murderers on death row, flown over L.A. with the LAPD and patrolled with the Royal Canadian Mounted Police near the Arctic. He’s also reported from the Caribbean, Africa and Kuwait’s border with Iraq. His books have been published in nearly 30 countries, including an illegal translation produced in Iran.", remote_picture_url: "http://res.cloudinary.com/pmarzagao/image/upload/v1527683243/Pedro_Headshot_2.jpg")
-user4 = User.create!(email:"alexandrefontes@gmail.com", password:"123456", name: "Alexandre Fontes",owner_bio:"Alexandre is a former journalist who has interviewed murderers on death row, flown over L.A. with the LAPD and patrolled with the Royal Canadian Mounted Police near the Arctic. He’s also reported from the Caribbean, Africa and Kuwait’s border with Iraq. His books have been published in nearly 30 countries, including an illegal translation produced in Iran.", remote_picture_url: "http://res.cloudinary.com/pmarzagao/image/upload/v1527683260/8GaEWuxK_400x400.jpg")
+user1 = User.create!(
+  email:"andreiadomingues@gmail.com",
+  password:"123456",
+  name:"Andreia Domingues",
+  owner_bio:"Andreia is a tv host that doesn't like tv and prefers reading, she can be found with a book in hand at the most random places and situations: mountain tops, car repair garages and in the middle of a hurricane ",
+  remote_picture_url: "http://res.cloudinary.com/pmarzagao/image/upload/v1527683260/8GaEWuxK_400x400.jpg")
+user2 = User.create!(
+  email:"jeromedharveng@gmail.com",
+  password:"123456",
+  name: "Jerome Harveng",
+  owner_bio:"Jerome is a surfer, that travels the world in championships, but while other surfers like to discuss the waves to discuss philosophy (others eventually leave)",
+  remote_picture_url:"http://res.cloudinary.com/pmarzagao/image/upload/v1527684917/image_2.png")
+user3 = User.create!(
+  email:"pedromarzagao@gmail.com",
+  password:"123456",
+  name: "Pedro Marzagão",
+  owner_bio:"Pedro is a sky-diving professional who has spent most of his life up in the air. He goes on a new plane everyday but nothings makes him fly like a book",
+  remote_picture_url: "http://res.cloudinary.com/pmarzagao/image/upload/v1527683243/Pedro_Headshot_2.jpg")
+user4 = User.create!(
+  email:"alexandrefontes@gmail.com",
+  password:"123456",
+  name: "Alexandre Fontes",
+  owner_bio:"Alexandre is a former journalist who has interviewed murderers on death row, flown over L.A. with the LAPD and patrolled with the Royal Canadian Mounted Police near the Arctic. He’s also reported from the Caribbean, Africa and Kuwait’s border with Iraq. His books have been published in nearly 30 countries, including an illegal translation produced in Iran.",
+  remote_picture_url: "http://res.cloudinary.com/pmarzagao/image/upload/v1527683260/8GaEWuxK_400x400.jpg")
 
 
 Book.create!(
