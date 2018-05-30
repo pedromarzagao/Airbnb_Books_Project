@@ -1,11 +1,27 @@
-<%= simple_form_for(@book) do |f| %>
-  <%= render partial: 'shared/form_errors', locals: { model: @book } %>
-  <%= f.input :title %>
-  <%= f.input :category %>
-  <%= f.input :summary %>
-  <%= f.input :picture %>
-  <%= f.input :picture_cache, as: :hidden %>
-  <%= f.submit "Add a book", class: "btn btn-primary" %>
-<% end %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 col-md-offset-4">
+      <div class="book-logo">
+        <%= image_tag "logo.png", height:100 %>
+      </div>
+      <div class="form-box">
+            <h1>Add a Book</h1>
 
+                <%= simple_form_for(@book) do |f| %>
+                  <%= render partial: 'shared/form_errors', locals: { model: @book } %>
+                  <%= f.input :title %>
+                  <%= f.input :category %>
+                  <%= f.input :summary %>
+                  <%= f.input :address %>
+                  <%= f.input :picture %>
+                  <%= f.input :picture_cache, as: :hidden %>
+                  <%= f.submit "Add a book", class: "btn btn-primary wide-button" %>
+                <% end %>
 
+            <div class="extra-links">
+              <%#= render "devise/shared/links"%>
+            </div>
+      </div>
+    </div>
+  </div>
+</div>
