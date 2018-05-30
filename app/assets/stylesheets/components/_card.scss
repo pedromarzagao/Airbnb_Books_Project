@@ -11,6 +11,10 @@
   color: white;
   position: relative;
   margin-bottom: 20px;
+    a {
+      font-size: 12px;
+      color: white;
+    }
 }
 .card-user {
   position: absolute;
@@ -28,7 +32,7 @@
 }
 .card-description {
   position: absolute;
-  bottom: 50px;
+  bottom: 25px;
   left: 10px;
 }
 .card-description h2 {
