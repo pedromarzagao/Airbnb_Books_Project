@@ -11,9 +11,17 @@ class Book < ApplicationRecord
   after_validation :geocode, if: :will_save_change_to_address?
 
   pg_search_scope :global_search,
-    against: [ :title, :summary, :address],
+    against: {
+      title: 'A',
+      summary:'B',
+      address: 'C'
+    },
+
     associated_against: {
-      user: [ :name, :owner_bio ]
+      user: {
+        name: 'A',
+        owner_bio: 'B'
+      }
     },
     using: {
       tsearch: { prefix: true }
