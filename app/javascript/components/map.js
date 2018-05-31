@@ -13,7 +13,30 @@ const initMap = function(mapElement) {
     } else {
       map.fitLatLngBounds(markers);
     }
+    const styles = [     {
+        "featureType": "all",
+        "elementType": "all",
+        "stylers": [
+            {
+                "visibility": "simplified"
+            },
+            {
+                "hue": "#ff0000"
+            }
+        ]
+    }];
+
+map.addStyle({
+  styles: styles,
+  mapTypeId: 'map_style'
+});
+map.setStyle('map_style');
   }
 };
+
+
+
+
+
 
 export default initMap;
