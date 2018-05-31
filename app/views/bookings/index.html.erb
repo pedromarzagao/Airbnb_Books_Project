@@ -1,0 +1,8 @@
+<div class="container">
+  <div class="row"></div>
+    <div class="bookings-box">
+      <% @bookings.each do |booking|  %>
+          <%= render 'shared/booking_card', booking:booking %>
+      <% end %>
+    </div>
+</div>
