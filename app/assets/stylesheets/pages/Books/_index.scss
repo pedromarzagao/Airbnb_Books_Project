@@ -4,6 +4,13 @@
   p {
     font-size: 18px;
     color: gray;
-    magin-left: 20px;
+    margin-left: 30px;
   }
+}
+
+.title-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 70px;
 }
