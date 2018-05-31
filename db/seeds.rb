@@ -44,6 +44,7 @@ Book.create!(
   user: user1,
   category: "Coming-of-Age Fiction",
   address: "Paris, France",
+  price: 8.2,
   remote_picture_url:"http://res.cloudinary.com/pmarzagao/image/upload/v1527685225/images_1.jpg"
 )
 
@@ -54,6 +55,7 @@ Nir Eyal answers these questions (and many more) by explaining the Hook Model—
   user: user2,
   category: "Fiction",
   address: "Lille, France",
+  price: 5,
   remote_picture_url: "http://res.cloudinary.com/pmarzagao/image/upload/v1527685225/images_2.jpg"
 )
 
@@ -63,6 +65,7 @@ Book.create!(
   user: user3,
   category: "Drama",
   address: "Roubaix, France",
+  price: 9,
   remote_picture_url: "http://res.cloudinary.com/pmarzagao/image/upload/v1527685225/images_3.jpg"
 )
 
@@ -72,6 +75,7 @@ Book.create!(
   user: user4,
   category: "Self-Improvement",
   address: "Tourcoing, France",
+  price: 12,
   remote_picture_url: "http://res.cloudinary.com/pmarzagao/image/upload/v1527685225/images_4.jpg"
   )
 
