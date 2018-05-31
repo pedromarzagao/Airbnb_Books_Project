@@ -8,6 +8,7 @@
 
 Book.destroy_all
 User.destroy_all
+Booking.destroy_all
 
 
 puts "Finished cleaning"
@@ -79,4 +80,13 @@ Book.create!(
   remote_picture_url: "http://res.cloudinary.com/pmarzagao/image/upload/v1527685225/images_4.jpg"
   )
 
-
+10.times do
+  Booking.create!(
+  paid: true,
+  rating: "What an amazing book! Definitely recommend it.",
+  date_begin: Date.new(2018,7,1).strftime("%F"),
+  date_end: Date.new(2018,7,3).strftime("%F"),
+  user: User.all.sample,
+  book: Book.all.sample
+  )
+end
