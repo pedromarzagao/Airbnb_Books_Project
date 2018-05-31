@@ -1,8 +1,18 @@
 class BookingsController < ApplicationController
-  before_action :set_book
+  before_action :set_book, except: [:index]
+
+  def index
+    @bookings = Booking.where(user: current_user)
+  end
 
   def show
-    @booking = Booking.find(params[:id])
+    if params[:id] == nil
+      @booking = Booking.find(params[:id])
+      # @booking = Booking.where(@booking.user = current_user)
+    else
+      @book = Book.find(params[:book_id])
+      @booking = Booking.find(params[:id])
+    end
   end
 
   def new

@@ -75,4 +75,11 @@ Book.create!(
   remote_picture_url: "http://res.cloudinary.com/pmarzagao/image/upload/v1527685225/images_4.jpg"
   )
 
-
+Booking.create!(
+  paid: true,
+  rating: 5,
+  date_begin: DateTime.new(2018,7,1),
+  date_end: DateTime.new(2018,7,3),
+  user: User.all.sample,
+  book: Book.all.sample
+  )
