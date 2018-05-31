@@ -10,10 +10,16 @@
 </div>
 <%#= f.input :photo %>
 <%#= f.input :photo_cache, as: :hidden %>
-<div class="book-booking-box">
-  <%= f.submit "Book it!", class: "btn btn-danger" %>
-</div>
+
+    <div class="book-booking-box">
+      <%= f.submit "Book it!",class: "btn btn-danger" %>
+    </div>
+
 <% end %>
+
+<!-- f.button :submit_cancel, 'Save', :cancel=>orders_path -->
+
+
 
 
 

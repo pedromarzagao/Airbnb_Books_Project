@@ -10,14 +10,15 @@ class BookingsController < ApplicationController
   end
 
   def create
+
     @booking = Booking.new(booking_params)
     @booking.user = current_user
     @booking.book = @book
-
+    @booking.rating = 0
     if @booking.save
-      redirect_to booking_path(@booking)
+      redirect_to book_booking_path(params[:book_id], @booking)
     else
-      render :new
+      redirect_to @book
     end
   end
 
@@ -28,7 +29,7 @@ class BookingsController < ApplicationController
   end
 
   def booking_params
-    params.require(:booking).permit(:user_id, :book_id)
+    params.require(:booking).permit(:user_id, :book_id,:date_begin, :date_end)
   end
 end
 
