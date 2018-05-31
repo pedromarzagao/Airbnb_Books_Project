@@ -1,23 +1,31 @@
-<div class="container">
-  <div class="row">
-    <div class="index-title">
-      <!-- <p<span align="center">All of our <%=@books.length %> super amazing books and </span><span> <input type="text" name="query" id="query" placeholder="in the mood for..."> </span> <span><input type=”submit” value=Search class="btn btn-primary"></span></p> -->
-      <p>All of our <%=@books.length %> super amazing books</p>
-    </div>
-    <div class="query_box">
-      <%= form_tag books_path, method: :get do %>
-        <%= text_field_tag :query,
-          params[:query],
-          class: "form-control",
-          placeholder: "Find a book"
-        %>
-      <% end %>
-    </div>
-  </div>
-</div>
-
 <div class="content">
   <div class="cards-container container">
+    <div class="row">
+      <div class="title-container">
+
+        <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="index-title">
+          <!-- <p<span align="center">All of our <%=@books.length %> super amazing books and </span><span> <input type="text" name="query" id="query" placeholder="in the mood for..."> </span> <span><input type=”submit” value=Search class="btn btn-primary"></span></p> -->
+            <p>All of our <%=@books.length %> super amazing books</p>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-8">
+          <div class="query-box">
+            <i class="fa fa-search"></i>
+            <%= form_tag books_path, method: :get do %>
+              <%= text_field_tag :query,
+                params[:query],
+                class: "form-control",
+                placeholder: "Find a book"
+              %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+
+
+  </div>
    <div class="row">
 
     <%# if query = " " %>
