@@ -6,6 +6,7 @@ gem 'carrierwave', '~> 1.2'
 gem 'cloudinary'
 # Install Gem Devise
 gem 'devise'
+gem 'pg_search'
 
 gem "geocoder"
 
