@@ -4,20 +4,26 @@
     cursor: pointer;
     perspective: 800px;
     transform-style: preserve-3d;
+    flex: 2 1 auto;
   .booking-box {
-    padding: 10px;
+    padding: 0px;
     display: flex;
     justify-content:space-around;
     align-items: center;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
     .book-picture {
-      width: 60px;
       margin-right: 20px;
+      background-position: center;
+      background-size: 100%;
+      background-repeat: no-repeat;
+      height: 155px;
+      width: 20%;
     }
     .book-title-category {
       display: flex;
       flex-direction: column;
       flex-grow: 1;
+      padding: 10px;
       .book-title {
         font-size: 16px;
       }
@@ -28,6 +34,7 @@
     .booking-details {
       display:flex;
       flex-direction: column;
+      padding:10px;
       .booking-dates {
         display:block;
         margin-right: 5px;
@@ -49,9 +56,11 @@
         font-size: 10px;
         display: block;
         text-align: center;
+        padding: 10px;
       }
     .booking-book-address-map {
         width: 100px;
+        padding: 10px;
       }
     }
   .book-details-box {
@@ -59,6 +68,7 @@
     justify-content: space-around;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
     padding: 10px;
+    margin-bottom: 20px;
     .book-summary {
       font-size: 12px;
       margin-right: 20px;
@@ -100,7 +110,7 @@
 
 .booking-box {
   //z-index: 10;
-  transition: .3s ease all;
+  transition: .9s ease all;
 }
 
 
@@ -114,7 +124,7 @@
   transform: rotateX(-180deg);
   transform-origin: top center;
   backface-visibility: hidden;
-  transition: .3s transform ease;
+  transition: .9s ease all;
 
   &:before {
     content: '';
@@ -124,7 +134,7 @@
     left: 10%;
     right: 10%;
     height: 1px;
-    background: grey;
+    // background: grey;
   }
 
   .booking-card:hover & {
@@ -137,4 +147,14 @@
 
 .book-details-box__inner {
   padding: 15px 30px;
+}
+
+#NotPaid {
+  color: red;
+  font-size: 12px;
+}
+
+#Paid {
+  color: green;
+  font-size: 12px;
 }
