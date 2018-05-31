@@ -2,8 +2,9 @@
   border-bottom: 1px solid $gray-light;
   display:flex;
   align-items: center;
+
   i {
-    color: gray;
+    color: #E4515B;
   }
   input{
     border: none;
@@ -22,4 +23,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 100px;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #E4515B;
 }
