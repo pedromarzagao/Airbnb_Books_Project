@@ -1,6 +1,12 @@
 class BooksController < ApplicationController
   def index
-    @books = Book.where.not(latitude: nil, longitude: nil)
+    # @books = Book.where.not(latitude: nil, longitude: nil)
+
+    if params[:query].present? && Book.where.not(latitude: nil, longitude: nil)
+        @books = Book.global_search(params[:query])
+    else
+        @books = Book.all
+    end
 
     @markers = @books.map do |book|
       {
