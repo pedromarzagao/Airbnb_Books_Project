@@ -1,6 +1,15 @@
-<h1>Booking of book : <%= @booking.book.title %></h1>
+<div class="container">
+<h3>Dear, <%= current_user.name %>, we want you to thank for the booking of <%= @booking.book.title %> </h3>
+<p> Your booking starts on <%=  @booking.date_begin.day %> / <%= @booking.date_begin.month %>
+  / <%= @booking.date_begin.year %>
+</p>
+<!-- <p> for a duration of <%=  ((@booking.date_end - @booking.date_begin) / (24 * 60 * 60)).to_i %> day(s)</p> -->
+<p> for a duration of <%=  (@booking.date_end - @booking.date_begin).to_i %> day(s)</p>
+<p>Total price : <%= @book.price * (@booking.date_end - @booking.date_begin).to_i    %> €</p>
 
-<p> Booking startdate : <%=  @booking.date_begin %></p>
-
+<!-- input_date = document.getElementById(‘booking_date_begin’).value
+end_date = document.getElementById(‘booking_date_end').value
+Date.strptime('03-02-2001', ‘%d-%m-%Y') -->
 
 <%= link_to 'Back', books_path %>
+</div>
