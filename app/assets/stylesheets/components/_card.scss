@@ -33,6 +33,11 @@
     background-position: center;
     position: relative;
   }
+  &-avatar {
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 50%;
+  }
   &-price {
     position: absolute;
     background-color: $brand-danger;
@@ -55,12 +60,28 @@
     width: 160px;
     text-transform: uppercase;
     padding: 10px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     h5 {
       margin: 0;
       font-size: 14px;
       text-align:center;
     }
-
-
   }
+.card-link {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    z-index: 2;
+    background: black;
+    opacity: 0;
+}
+.card-link:hover {
+  opacity: 0.1;
+}
+
 }
