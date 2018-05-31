@@ -150,8 +150,19 @@
     width: 100%;
     font-size: 14px;
     margin-right: 0;
-
   }
+
+.price_tag {
+  visibility: hidden;
+  background-color: #c4e3cb;
+  border-radius: 10px;
+  padding: 20px;
+  margin:10px;
+  text-align:center;
+  color: white;
+}
+
+
 
 
 
