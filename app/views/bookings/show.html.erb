@@ -3,8 +3,9 @@
 <p> Your booking starts on <%=  @booking.date_begin.day %> / <%= @booking.date_begin.month %>
   / <%= @booking.date_begin.year %>
 </p>
-<p> for a duration of <%=  ((@booking.date_end - @booking.date_begin) / (24 * 60 * 60)).to_i %> day(s)</p>
-
+<!-- <p> for a duration of <%=  ((@booking.date_end - @booking.date_begin) / (24 * 60 * 60)).to_i %> day(s)</p> -->
+<p> for a duration of <%=  (@booking.date_end - @booking.date_begin).to_i %> day(s)</p>
+<p>Total price : <%= @book.price * (@booking.date_end - @booking.date_begin).to_i    %> €</p>
 
 <!-- input_date = document.getElementById(‘booking_date_begin’).value
 end_date = document.getElementById(‘booking_date_end').value
