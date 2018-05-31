@@ -47,10 +47,25 @@
   }
 }
 
+.book-category-price {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  margin-bottom: 35px;
+  align-items: center;
+}
+
 .book-details-category {
   h3 {
     font-size: 16px;
   }
+}
+
+.book-details-price {
+  background-color: forestgreen;
+  color: white;
+  padding: 5px 20px;
+  border-radius: 5px;
 }
 
 .book-details-rating {
@@ -64,6 +79,7 @@
 .book-details-summary {
   p {
     font-size: 16px;
+    line-height: 35px;
   }
 }
 
@@ -96,6 +112,7 @@
   .owner-bio {
     text-align: left;
     font-size: 14px;
+    line-height: 30px;
   }
 }
 

@@ -16,9 +16,15 @@
                     <div class="book-details-title">
                       <h1><%= @book.title %></h1>
                     </div>
-                    <div class="book-details-category">
-                      <h3><%= @book.category %></h3>
+                    <div class="book-category-price">
+                      <div class="book-details-category">
+                        <%= @book.category %>
+                      </div>
+                      <div class="book-details-price">
+                        <%= @book.price %>€/day
+                      </div>
                     </div>
+
                     <div class="book-details-rating">
 
                     </div>
