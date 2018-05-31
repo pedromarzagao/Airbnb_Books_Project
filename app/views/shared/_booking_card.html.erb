@@ -1,0 +1,39 @@
+<div class="col-md-6">
+    <div class="booking-card">
+      <div class="booking-box">
+        <div class="book-picture">
+          <%= cl_image_tag booking.book.picture, height:100 %>
+        </div>
+        <div class="book-title">
+          <%= booking.book.title %>
+        </div>
+        <div class="booking-details">
+          <div class="booking-dates">
+            <div class="booking-date-begin">
+              <p>Rental Begins</p>
+              <p class='booking-date'><%= booking.date_begin %></p>
+            </div>
+            <div class="booking-date-end">
+              <p>Rental Ends</p>
+              <p class='booking-date'><%= booking.date_end%></p>
+            </div>
+          </div>
+          <div class="booking-book-address">
+             <%= booking.book.address %>
+          </div>
+        </div>
+          <div class="booking-book-address-map">
+
+          </div>
+      </div>
+      <div class="book-details-box">
+        <div class="book-summary">
+          <%= booking.book.summary %>
+        </div>
+        <div class="book-user">
+          <%= cl_image_tag booking.book.user.picture, height: 60 ,class: "avatar" %>
+          <%= booking.book.user.name %>
+        </div>
+      </div>
+    </div>
+</div>

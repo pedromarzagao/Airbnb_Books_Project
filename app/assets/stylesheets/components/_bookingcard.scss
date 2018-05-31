@@ -1,0 +1,56 @@
+.booking-card {
+    width: 100%;
+  .booking-box {
+    padding: 10px;
+    display: flex;
+    justify-content:space-around;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+    .book-picture {
+      width: 60px;
+      margin-right: 5px;
+
+    }
+    .book-title {
+      font-size: 16px;
+      flex-grow: 1;
+    }
+    .booking-details {
+      display:flex;
+      flex-direction: column;
+      .booking-dates {
+        display:block;
+        margin-right: 5px;
+        font-size: 10px;
+       .booking-date-begin {
+        margin-bottom: 5px;
+       }
+       .booking-date-end {
+       }
+      }
+      .booking-book-address {
+        font-size: 14px;
+        display: block;
+      }
+    }
+      .booking-book-address-map {
+        width: 100px;
+      }
+    }
+  .book-details-box {
+    display: flex;
+    justify-content: space-around;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+    padding: 10px;
+    .book-address {
+      font-size: 12px;
+    }
+    .book-user {
+      font-size: 12px;
+    }
+  }
+}
+
+
+.booking-date {
+  font-size: 12px;
+}

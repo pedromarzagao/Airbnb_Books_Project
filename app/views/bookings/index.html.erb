@@ -2,10 +2,7 @@
   <div class="row"></div>
     <div class="bookings-box">
       <% @bookings.each do |booking|  %>
-          <%= booking.book.title %>
-          <%= booking.book.address %>
-          <%= booking.book.date_begin %>
-          <%= booking.book.date_end %>
+          <%= render 'shared/booking_card', booking:booking %>
       <% end %>
     </div>
 </div>

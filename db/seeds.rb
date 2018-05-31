@@ -8,6 +8,7 @@
 
 Book.destroy_all
 User.destroy_all
+Booking.destroy_all
 
 
 puts "Finished cleaning"
@@ -81,9 +82,9 @@ Book.create!(
 
 Booking.create!(
   paid: true,
-  rating: 5,
-  date_begin: DateTime.new(2018,7,1),
-  date_end: DateTime.new(2018,7,3),
-  user: User.all.sample,
+  rating: "What an amazing book! Definitely recommend it.",
+  date_begin: Date.new(2018,7,1).strftime("%F"),
+  date_end: Date.new(2018,7,3).strftime("%F"),
+  user: user3,
   book: Book.all.sample
   )
