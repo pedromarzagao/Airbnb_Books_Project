@@ -2,8 +2,9 @@
   border-bottom: 1px solid $gray-light;
   display:flex;
   align-items: center;
+
   i {
-    color: gray;
+    color: #E4515B;
   }
   input{
     border: none;
@@ -15,11 +16,12 @@
       border:none;
       box-shadow: none;
     }
+    &::placeholder { /* Most modern browsers support this now. */
+      color: #FFA1A6;
+    }
   }
 }
 
-.title-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+
+
+
