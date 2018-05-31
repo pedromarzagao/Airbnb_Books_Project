@@ -1,5 +1,10 @@
 <div class="col-md-6">
     <div class="booking-card">
+      <div class="booking-box-tab">
+        <div class="booking-box-status">
+          <%= link_to 'Review', edit_book_booking_path(booking.book_id, booking) %>
+        </div>
+      </div>
       <div class="booking-box">
 
         <div class="book-picture" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
@@ -18,9 +23,13 @@
             </div>
              <div class="booking-paid">
               <% if booking.paid == true%>
-                 <p id="Paid" ><%= "Paid"%></p>
+                 <p id="Paid" ><%= "Paid "%><i class="fas fa-check"></i>
+
+</p>
               <% else %>
-                 <p id="NotPaid"><%= "Not Paid" %></p>
+                 <p id="NotPaid"><%= "Not Paid " %><i class="fas fa-times"></i>
+
+</p>
               <% end %>
             </div>
         </div>
@@ -35,14 +44,17 @@
               <p>Rental Ends</p>
               <p class='booking-date'><%= booking.date_end%></p>
             </div>
+            <div class="booking-review">
+
+            </div>
           </div>
         </div>
           <div class="booking-book-address-map">
-              <div class="booking-book-address">
+              <!-- <div class="booking-book-address">
                 <%= booking.book.address %>
-              </div>
+              </div> -->
               <div class="booking-book-address-map">
-                <%= link_to image_tag("http://res.cloudinary.com/pmarzagao/image/upload/c_scale,w_60/v1527780443/img_545318.png"), edit_book_booking_path(booking.book_id, booking) %>
+                <%= link_to image_tag("http://res.cloudinary.com/pmarzagao/image/upload/c_scale,w_38/v1527784831/678111-map-marker-512.png"), edit_book_booking_path(booking.book_id, booking) %>
               </div>
           </div>
         <div class="review-button">
