@@ -18,7 +18,7 @@ class BooksController < ApplicationController
   end
 
   def new
-    @book = Book.new()
+    @book = Book.new
   end
 
   def create
@@ -35,11 +35,12 @@ class BooksController < ApplicationController
 
   def show
     @book = Book.find(params[:id])
+    @booking = Booking.new
   end
 
   private
 
   def book_params
-    params.require(:book).permit(:title, :summary, :address, :picture, :category)
+    params.require(:book).permit(:title, :summary, :address,:price ,:picture, :category)
   end
 end
