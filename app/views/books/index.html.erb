@@ -6,16 +6,22 @@
   </div>
 </div>
 
+
 <div class="content">
   <div class="cards-container container">
+    <div class="row">
+        <div class="search-box">
+
+        </div>
+      </div>
    <div class="row">
     <% @books.each do |book| %>
       <div class="col-xs-12 col-sm-6 col-md-4">
-        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.5)), url('<%= cl_image_path book.picture %> ');">
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.8)), url('<%= cl_image_path book.picture %> ');">
           <div class="card-category"><%= book.category %></div>
           <div class="card-description">
           <h2 ><%= book.title %></h2>
-          <p> <%= book.price %></p>
+          <p> <%= book.price %>€/day</p>
           </div>
           <img class="card-user" src="<%= cl_image_path book.user.picture%>">
           <%= link_to 'Show book', book, class: "card-link" %>
