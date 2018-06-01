@@ -5,26 +5,7 @@
     perspective: 800px;
     transform-style: preserve-3d;
     flex: 2 1 auto;
-
-  .booking-box-tab {
-    width: 100%;
-    height: 25px;
-    display:flex;
-    justify-content: flex-end;
-    .booking-box-status {
-      width: 80px;
-      background-color: #FFA1A6;
-      font-size: 10px;
-      text-align: center;
-
-      border-radius: 5px 5px 0px 0px;
-      padding:5px;
-      a {
-        color: white;
-      }
-
-    }
-  }
+    border-radius: 3px;
   .booking-box {
     padding: 0px;
     display: flex;
@@ -40,7 +21,7 @@
       height: 155px;
       width: 20%;
     }
-    .book-title-category {
+    .book-title-category-value {
       display: flex;
       flex-direction: column;
       flex-grow: 1;
@@ -51,6 +32,34 @@
       }
       .book-category {
         font-size: 12px;
+      }
+      .booking-value-paid {
+        display: flex;
+        .booking-value {
+        background-color: #EE5F5B;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        color: white;
+        font-size: 12px;
+        }
+        .booking-paid {
+        background-color: #EE5F5B;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        color: white;
+        font-size: 12px;
+        margin-left: 5px;
+        }
       }
     }
     .booking-details {
@@ -89,6 +98,29 @@
         width: 100px;
         padding: 10px;
         text-align: center;
+        height:155px;
+        display:flex;
+        font-size:10px;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        a{
+          color: white;
+          text-decoration: no;
+        }
+        .review-button {
+          .booking-box-status {
+            padding: 5px 10px;
+            width: 80px;
+            height: 25px;
+            margin-top: 15px;
+            background-color: white;
+            a{
+              color: #FA4A51;
+              text-decoration: no;
+            }
+          }
+        }
       }
     }
   .book-details-box {
@@ -177,12 +209,24 @@
   padding: 15px 30px;
 }
 
-#NotPaid {
-  color: red;
-  font-size: 12px;
+#red {
+  background-color: #EE5F5B;
+  color: white;
 }
 
-#Paid {
-  color: green;
-  font-size: 12px;
+#green {
+  background-color: #009A60;
+  color: white;
+}
+
+#red-color {
+  a {
+    color: #EE5F5B;
+  }
+}
+
+#green-color {
+  a {
+    color: #009A60;
+  }
 }
