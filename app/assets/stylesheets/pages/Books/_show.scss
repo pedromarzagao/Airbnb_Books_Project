@@ -124,15 +124,30 @@
   flex-direction: column;
   flex: 0 0 450px;
   margin-top: 113px;
-  .book-booking-form {
-    height: 300px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: space-between ;
-    padding: 40px;
-    //align-items: center;
+
+  .book-booking-table {
+      height: 300px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 30px;
+    .book-booking-form {
+      display: flex;
+      justify-content: space-between ;
+      padding: 30px;
+      //align-items: center;
+    }
+    .price_tag {
+      visibility: hidden;
+      background-color: #c4e3cb;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 40px;
+      text-align:center;
+      color: white;
+    }
   }
+
   .book-booking-box {
     display: flex;
     flex-direction: column;
@@ -152,15 +167,7 @@
     margin-right: 0;
   }
 
-.price_tag {
-  visibility: hidden;
-  background-color: #c4e3cb;
-  border-radius: 10px;
-  padding: 20px;
-  margin:10px;
-  text-align:center;
-  color: white;
-}
+
 
 
 
