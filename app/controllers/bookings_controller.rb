@@ -3,9 +3,13 @@ class BookingsController < ApplicationController
   before_action :set_booking, only: [:edit]
 
   def index
-    @bookings = Booking.where(user: current_user)
-    # @q = Person.ransack(params[:q])
-    # @people = @q.result(distinct: true)
+    # if params[:query].present?
+        @search = Booking.where(user: current_user).ransack(params[:q])
+        @bookings = @search.result.includes(:book).order(updated_at: :desc)
+        # @search.build_condition
+    # else
+    #     @bookings = Booking.where(user: current_user)
+    # end
   end
 
   def show

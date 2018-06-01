@@ -7,6 +7,8 @@ class Booking < ApplicationRecord
 
   before_save :calculate_price
 
+  scope :reviewed, ->(string) { where.not(review:nil) }
+
   def calculate_price
     self.price = (self.date_end - self.date_begin) * self.book.price
   end

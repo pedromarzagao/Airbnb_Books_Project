@@ -2,3 +2,38 @@
   margin-top: 50px;
   transition: flex-grow 1000ms linear;
 }
+
+form#booking_search {
+    margin-top: 20px;
+    margin-left: 30px;
+    font-size: 15px;
+}
+
+input[type="submit"] {
+    font-size: 12px;
+    background-color: rgba(0, 0, 0, 0.0);
+    color: #EE5F5B;
+    border-width: 1px;
+    height: 34px;
+    width: 100px;
+    border-color: #EE5F5B;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+}
+
+input#q_book_title_start {
+    height: 34px;
+    border-width: 0px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+  }
+
+select#q_paid_eq {
+    border-radius: 0px;
+    height: 34px;
+    width: 80px;
+    margin-right: 20px;
+    background-color: white;
+    border-width: 0px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}

@@ -1,4 +1,16 @@
 <div class="container">
+  <div class="row">
+    <%= search_form_for @search do |f| %>
+
+  <%= f.label :paid %>
+  <%= f.select :paid_eq, options_for_select([true,false]), include_blank: true %>
+
+  <%= f.label :book_title %>
+  <%= f.search_field :book_title_start %>
+
+  <%= f.submit %>
+<% end %>
+  </div>
   <div class="row"></div>
     <div class="bookings-box">
       <% @bookings.each do |booking|  %>
