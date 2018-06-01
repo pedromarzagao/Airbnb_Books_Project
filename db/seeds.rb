@@ -23,7 +23,7 @@ user2 = User.create!(
   email:"jeromedharveng@gmail.com",
   password:"123456",
   name: "Jerome Harveng",
-  owner_bio:"Jerome is a surfer, that travels the world in championships, but while other surfers like to discuss the waves to discuss philosophy (others eventually leave)",
+  owner_bio:"Jerome is a surfer, that travels the world in championships, but while other surfers like to discuss the waves he loves to discuss philosophy. He created a new surf modality: stand-up-paddle-and-read.",
   remote_picture_url:"http://res.cloudinary.com/pmarzagao/image/upload/v1527684917/image_2.png")
 user3 = User.create!(
   email:"pedromarzagao@gmail.com",

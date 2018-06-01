@@ -32,7 +32,7 @@ class BooksController < ApplicationController
   end
 
   def mybooks
-    @books = Book.where(user: current_user).page(params[:page]).per(9)
+    @books = Book.where(user: current_user).page(params[:page]).per(8)
   end
 
   def new
