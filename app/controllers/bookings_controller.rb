@@ -5,8 +5,7 @@ class BookingsController < ApplicationController
   def index
     # if params[:query].present?
         @search = Booking.where(user: current_user).ransack(params[:q])
-        @bookings = @search.result.includes(:book)
-        @booking_reviewed = Booking.where(user:current_user,review:nil)
+        @bookings = @search.result.includes(:book).order(updated_at: :desc)
         # @search.build_condition
     # else
     #     @bookings = Booking.where(user: current_user)
