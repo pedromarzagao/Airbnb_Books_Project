@@ -4,6 +4,8 @@ class BookingsController < ApplicationController
 
   def index
     @bookings = Booking.where(user: current_user)
+    # @q = Person.ransack(params[:q])
+    # @people = @q.result(distinct: true)
   end
 
   def show
