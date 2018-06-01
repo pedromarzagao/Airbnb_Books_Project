@@ -123,7 +123,7 @@ Book.create!(
   )
 
 
-10.times do
+30.times do
   Booking.create!(
   paid: [true,false].sample,
   rating: 0,

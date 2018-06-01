@@ -2,10 +2,15 @@
     <div class="booking-card">
 
       <div class="booking-box">
-
-        <div class="book-picture" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
-         url('<%= cl_image_path booking.book.picture%>')">
-        </div>
+      <% if booking.paid == false %>
+            <div class="book-picture" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
+             url('<%= cl_image_path booking.book.picture%>'); filter: grayscale(100%);">
+            </div>
+        <% else %>
+            <div class="book-picture" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
+             url('<%= cl_image_path booking.book.picture%>');">
+            </div>
+        <% end %>
 
         <div class="book-title-category-value">
             <div class="book-title">
@@ -18,10 +23,11 @@
               <div class="booking-value">
                 <%=booking.price%>€
               </div>
-               <div class="booking-paid">
                 <% if booking.paid == true%>
+                <div class="booking-paid" id="paid">
                    <%="Paid"%>
                 <% else %>
+                <div class="booking-paid" id="to-pay">
                    <%="To Pay" %>
                 <% end %>
               </div>
