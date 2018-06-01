@@ -122,6 +122,87 @@ Book.create!(
   remote_picture_url: "http://res.cloudinary.com/pmarzagao/image/upload/v1527786150/crushingit_amz.jpg"
   )
 
+#new seeds
+
+Book.create!(
+  title: "Catch 22",
+  summary: "Set in Italy during World War II, this is the story of the incomparable, malingering bombardier, Yossarian, a hero who is furious because thousands of people he has never met are trying to kill him. But his real problem is not the enemy—it is his own army, which keeps increasing the number of missions the men must fly to complete their service.",
+  user: user1,
+  category: "Romance",
+  address: "Paris, France",
+  price: 8.2,
+  remote_picture_url:"http://res.cloudinary.com/pmarzagao/image/upload/v1527854665/catch22.jpg"
+)
+
+Book.create!(
+  title: "The Sun Also Rises",
+  summary:"The quintessential novel of the Lost Generation, The Sun Also Rises is one of Ernest Hemingway's masterpieces and a classic example of his spare but powerful writing style. A poignant look at the disillusionment and angst of the post-World War I generation, the novel introduces two of Hemingway's most unforgettable characters: Jake Barnes and Lady Brett Ashley. ",
+  user: user1,
+  category: "Fiction",
+  address: "Lille, France",
+  price: 5,
+  remote_picture_url: "http://res.cloudinary.com/pmarzagao/image/upload/v1527854676/thsunalsorises.jpg"
+)
+
+Book.create!(
+  title: "We Were The Lucky Ones",
+  summary:"It is the spring of 1939 and three generations of the Kurc family are doing their best to live normal lives, even as the shadow of war grows closer. The talk around the family Seder table is of new babies and budding romance, not of the increasing hardships threatening Jews in their hometown of Radom, Poland. But soon the horrors overtaking Europe will become inescapable and the Kurcs will be flung to the far corners of the world, each desperately trying to navigate his or her own path to safety. ",
+  user: user1,
+  category: "Fiction",
+  address: "Roubaix, France",
+  price: 9,
+  remote_picture_url: "http://res.cloudinary.com/pmarzagao/image/upload/v1527854694/luckyones.jpg"
+)
+
+Book.create!(
+  title: "The One And Only Ivan",
+  summary:"Inspired by the true story of a captive gorilla known as Ivan, this illustrated book is told from the point of view of Ivan himself. This paperback edition includes an author's note highlighting the differences between the fictional story and true events, a version of the author's Newbery Medal acceptance speech, Ivan's signature discussion questions, and more.",
+  user: user1,
+  category: "Non Fiction",
+  address: "Tourcoing, France",
+  price: 12,
+  remote_picture_url: "http://res.cloudinary.com/pmarzagao/image/upload/v1527854708/oneandonlyivan.jpg"
+  )
+
+Book.create!(
+  title: "A Long Way From Home",
+  summary:"The two-time Booker Prize-winning author now gives us a wildly exuberant, wily new novel that circumnavigates 1954 Australia, revealing as much about the country/continent as it does about three audacious individuals who take part in the infamous 10,000-mile race, the Redex Trial.",
+  user: user1,
+  category: "Biography and Memoir",
+  address: "Beauvais, France",
+  price: 12,
+  remote_picture_url: "http://res.cloudinary.com/pmarzagao/image/upload/v1527854721/longwayhome.jpg"
+  )
+
+Book.create!(
+  title: "Small Great Things",
+  summary:"With richly layered characters and a gripping moral dilemma that will lead readers to question everything they know about privilege, power, and race, Small Great Things is the stunning new page-turner from Jodi Picoult.",
+  user: user1,
+  category: "Fiction",
+  address: "Chartres, France",
+  price: 12,
+  remote_picture_url: "http://res.cloudinary.com/pmarzagao/image/upload/v1527854743/smallgreatthings.jpg"
+  )
+
+Book.create!(
+  title: "The Great Gatsby",
+  summary:"A true classic of twentieth-century literature, this edition has been updated by Fitzgerald scholar James L.W. West III to include the author’s final revisions and features a note on the composition and text, a personal foreword by Fitzgerald’s granddaughter, Eleanor Lanahan—and a new introduction by two-time National Book Award winner Jesmyn Ward.",
+  user: user1,
+  category:"Non Fiction",
+  address: "Dreux, France",
+  price: 12,
+  remote_picture_url: "http://res.cloudinary.com/pmarzagao/image/upload/v1527854757/greatgatsby.jpg"
+  )
+
+Book.create!(
+  title: "Swing Time",
+  summary:"An ambitious, exuberant new novel moving from North West London to West Africa, from the multi-award-winning author of White Teeth and On Beauty.",
+  user: user1,
+  category: "Non Fiction",
+  address: "Versailles, France",
+  price: 6,
+  remote_picture_url: "http://res.cloudinary.com/pmarzagao/image/upload/v1527854771/swingtime.jpg"
+  )
 
 30.times do
   Booking.create!(
