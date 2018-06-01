@@ -21,13 +21,13 @@ class BooksController < ApplicationController
     @book = Book.find(params[:id])
     @booking = Booking.new
 
-    @marker =
+    @marker = [
       {
         lat: @book.latitude,
         lng: @book.longitude#,
         # infoWindow: { content: render_to_string(partial: "/flats/map_box", locals: { flat: flat }) }
       }
-     # byebug
+    ]
   end
 
   def new
