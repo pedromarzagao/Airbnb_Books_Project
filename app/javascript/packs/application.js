@@ -4,6 +4,10 @@ import initMap from '../components/map';
 import initMapShow from '../components/mapshow'
 import initDate from '../components/datepickr'
 import totPrice from '../components/total_price'
+import autocomplete  from '../components/autofill'
+
+var bookAddress = document.getElementById('book_address');
+autocomplete(bookAddress);
 
 const indexPage = document.querySelector('.books.index');
 if (indexPage) {
