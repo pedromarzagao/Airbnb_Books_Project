@@ -13,7 +13,7 @@ if (indexPage) {
 
 const showPage = document.querySelector('.books.show');
 if (showPage) {
-  const mapElement = document.getElementById('map');
+  const mapElement = document.getElementById('map-show');
   initMapShow(mapElement);
 }
 
