@@ -17,6 +17,7 @@ class BooksController < ApplicationController
     end
   end
 
+
   def show
     @book = Book.find(params[:id])
     @booking = Booking.new
@@ -28,6 +29,10 @@ class BooksController < ApplicationController
         # infoWindow: { content: render_to_string(partial: "/flats/map_box", locals: { flat: flat }) }
       }
     ]
+  end
+
+  def mybooks
+    @books = Book.where(user: current_user).page(params[:page]).per(9)
   end
 
   def new
