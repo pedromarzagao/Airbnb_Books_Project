@@ -2,9 +2,9 @@
   <div class="banner-content">
     <h1>Dear, <%= current_user.name %>, you've just booked <%= @booking.book.title %> </h1>
     <br>
-    <h1>Your booking starts on <%=  @booking.date_begin.day %>/<%= @booking.date_begin.month %>/<%= @booking.date_begin.year%></h1>
-    <h1>for a duration of <%=  (@booking.date_end - @booking.date_begin).to_i %> day(s)</h1>
-    <h1>Total price : <%= @book.price * (@booking.date_end - @booking.date_begin).to_i    %> €</h1>
+    <h2>Your booking starts on <%=  @booking.date_begin.day %>/<%= @booking.date_begin.month %>/<%= @booking.date_begin.year%></h2>
+    <h2>for a duration of <%=  (@booking.date_end - @booking.date_begin).to_i %> day(s)</h2>
+    <h2>Total price : <%= @book.price * (@booking.date_end - @booking.date_begin).to_i    %> €</h2>
     <br>
     <%= link_to 'Back', books_path, class:"btn btn-primary back" %>
   </div>
