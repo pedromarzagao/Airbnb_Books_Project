@@ -5,12 +5,14 @@
     perspective: 800px;
     transform-style: preserve-3d;
     flex: 2 1 auto;
+    border-radius: 3px;
   .booking-box {
     padding: 0px;
     display: flex;
     justify-content:space-around;
     align-items: center;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+    border-radius: 3px;
     .book-picture {
       margin-right: 20px;
       background-position: center;
@@ -19,16 +21,45 @@
       height: 155px;
       width: 20%;
     }
-    .book-title-category {
+    .book-title-category-value {
       display: flex;
       flex-direction: column;
       flex-grow: 1;
       padding: 10px;
       .book-title {
-        font-size: 16px;
+        font-size: 14px;
+        font-style: italic;
       }
       .book-category {
-        font-size: 14px;
+        font-size: 12px;
+      }
+      .booking-value-paid {
+        display: flex;
+        .booking-value {
+        background-color: #EE5F5B;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        color: white;
+        font-size: 12px;
+        }
+        .booking-paid {
+        background-color: #EE5F5B;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        color: white;
+        font-size: 12px;
+        margin-left: 5px;
+        }
       }
     }
     .booking-details {
@@ -51,6 +82,11 @@
           }
        }
       }
+      .booking-review {
+        margin-top: 10px;
+        font-size: 14px;
+        color: darkred;
+      }
     }
     .booking-book-address {
         font-size: 10px;
@@ -61,6 +97,30 @@
     .booking-book-address-map {
         width: 100px;
         padding: 10px;
+        text-align: center;
+        height:155px;
+        display:flex;
+        font-size:10px;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        a{
+          color: white;
+          text-decoration: no;
+        }
+        .review-button {
+          .booking-box-status {
+            padding: 5px 10px;
+            width: 80px;
+            height: 25px;
+            margin-top: 15px;
+            background-color: white;
+            a{
+              color: #FA4A51;
+              text-decoration: no;
+            }
+          }
+        }
       }
     }
   .book-details-box {
@@ -149,12 +209,34 @@
   padding: 15px 30px;
 }
 
-#NotPaid {
-  color: red;
-  font-size: 12px;
+#red {
+  background-color: #EE5F5B;
+  color: white;
 }
 
-#Paid {
-  color: green;
-  font-size: 12px;
+#green {
+  background-color: #009A60;
+  color: white;
+}
+
+#red-color {
+  a {
+    color: #EE5F5B;
+  }
+}
+
+#green-color {
+  a {
+    color: #009A60;
+  }
+}
+
+#paid {
+  background-color: #009A60;
+  color: white;
+}
+
+#to-pay {
+  background-color: #EE5F5B;
+  color: white;
 }

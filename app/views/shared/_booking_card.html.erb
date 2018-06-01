@@ -1,27 +1,36 @@
 <div class="col-md-6">
     <div class="booking-card">
+
       <div class="booking-box">
+      <% if booking.paid == false %>
+            <div class="book-picture" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
+             url('<%= cl_image_path booking.book.picture%>'); filter: grayscale(100%);">
+            </div>
+        <% else %>
+            <div class="book-picture" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
+             url('<%= cl_image_path booking.book.picture%>');">
+            </div>
+        <% end %>
 
-        <div class="book-picture" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
-         url('<%= cl_image_path booking.book.picture%>')">
-        </div>
-
-        <div class="book-title-category">
+        <div class="book-title-category-value">
             <div class="book-title">
                 <p><%= booking.book.title %></p>
             </div>
             <div class="book-category">
                <p><%= booking.book.category %></p>
             </div>
-            <div class="booking-value">
-              <p><%=booking.price%>€</p>
-            </div>
-             <div class="booking-paid">
-              <% if booking.paid == true%>
-                 <p id="Paid" ><%= "Paid"%></p>
-              <% else %>
-                 <p id="NotPaid"><%= "Not Paid" %></p>
-              <% end %>
+            <div class="booking-value-paid">
+              <div class="booking-value">
+                <%=booking.price%>€
+              </div>
+                <% if booking.paid == true%>
+                <div class="booking-paid" id="paid">
+                   <%="Paid"%>
+                <% else %>
+                <div class="booking-paid" id="to-pay">
+                   <%="To Pay" %>
+                <% end %>
+              </div>
             </div>
         </div>
 
@@ -37,16 +46,58 @@
             </div>
           </div>
         </div>
-          <div class="booking-book-address-map">
-              <div class="booking-book-address">
-                <%= booking.book.address %>
-              </div>
-              <div class="booking-book-address-map">
-                <%= link_to image_tag("http://res.cloudinary.com/pmarzagao/image/upload/c_scale,w_60/v1527780443/img_545318.png"), edit_book_booking_path(booking.book_id, booking) %>
-              </div>
-          </div>
-        <div class="review-button">
 
+        <div class="booking-book-address-map" id=
+            <% if booking.review == nil  %>
+            <%="red"%>
+            <% else %>
+            <%="green" %>
+            <% end %>
+            >
+            Book rating
+            <div class="book-stars">
+                <% b = Booking.where(book_id:booking.book) %>
+                <% avg = b.map { |x| x["rating"].to_f}.reduce(:+) / b.size %>
+                <% diff = avg - avg.to_i %>
+                <% avg.to_i.times do %>
+                  <i class="fas fa-star"></i>
+                <% end %>
+                <% if diff > 0 %>
+                  <i class="fas fa-star-half"></i>
+                <% end %>
+                <% (5-avg.round()).times do %>
+                  <i class="far fa-star"></i>
+                <% end %>
+            </div>
+
+            <% if (booking.rating != 0) %>
+                <%= "Your rating" %>
+                <div class="stars">
+                    <% booking.rating.to_i.times do %>
+                      <i class="fas fa-star"></i>
+                    <% end %>
+                    <% (5 - booking.rating.to_i).times do %>
+                      <i class="far fa-star"></i>
+                    <% end %>
+                </div>
+            <% end %>
+
+
+            <div class="review-button">
+                  <% if booking.review == nil %>
+                      <div class="booking-box-status" id="red-color">
+                      <%= link_to 'To Review', edit_book_booking_path(booking.book_id, booking) %>
+                  <% else %>
+                      <div class="booking-box-status" id="green-color">
+                      <%= link_to 'Edit Review', edit_book_booking_path(booking.book_id, booking) %>
+                  <% end %>
+                </div>
+            </div>
+            <% if booking.paid = false %>
+            <div class="pay-button">
+              Pay
+            </div>
+            <% end %>
         </div>
       </div>
       <div class="book-details-box">
@@ -59,5 +110,5 @@
           <p><%= booking.book.user.name %></p>
         </div>
       </div>
-    </div>
+</div>
 </div>

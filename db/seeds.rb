@@ -123,10 +123,10 @@ Book.create!(
   )
 
 
-10.times do
+30.times do
   Booking.create!(
   paid: [true,false].sample,
-  rating: rand(1..5),
+  rating: 0,
   date_begin: Date.new(2018,7,1).strftime("%F"),
   date_end: Date.new(2018,7,3).strftime("%F"),
   user: User.all.sample,
