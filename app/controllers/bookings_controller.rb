@@ -3,7 +3,6 @@ class BookingsController < ApplicationController
   before_action :set_booking, only: [:edit]
 
   def index
-
     # if params[:query].present?
         @search = Booking.where(user: current_user).ransack(params[:q])
         @bookings = @search.result.includes(:book)
@@ -12,8 +11,6 @@ class BookingsController < ApplicationController
     # else
     #     @bookings = Booking.where(user: current_user)
     # end
-
-
   end
 
   def show

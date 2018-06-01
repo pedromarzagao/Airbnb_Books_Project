@@ -1,18 +1,33 @@
 <div class="wrapper">
   <div class="containe-flow">
     <div class="row">
-      <div class="book-banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('<%= cl_image_path @book.picture%>')">
-      </div>
-    </div>
+
+      <div class="col-sm-offset-1 col-xs-2">
+        <div class="card-body-show" style="background-image: linear-gradient(rgba(0,0,0,0.0), rgba(0,0,0,0.0)), url('<%= cl_image_path @book.picture %> ');"">
+          <!-- insert <div class="card"> -->
+        </div>
+        </div>
+        <div class="col-xs-8">
+            <!-- insert <div class="card"> -->
+          <div
+            id="map-show"
+            style="width: 100%;
+            height: 300px;"
+            data-markers="<%= @marker.to_json %>"
+          ></div>
+
+        </div>
+
+
   </div>
-  <div class="book-container container">
+        <div class="book-container container">
 
-        <div class="book-details-container">
-          <div class="row">
-            <div class="book-box">
+          <div class="book-details-container">
+            <div class="row">
+              <div class="book-box">
 
-              <div class="book-details">
-                <div class="book-details-top-section">
+                <div class="book-details">
+                  <div class="book-details-top-section">
                     <div class="book-details-title">
                       <h1><%= @book.title %></h1>
                     </div>
@@ -28,39 +43,39 @@
                     <div class="book-details-rating">
 
                     </div>
-                </div>
-                <div class="book-details-bottom-section">
-                  <div class="book-details-summary">
-                    <p><%= @book.summary %></p>
+                  </div>
+                  <div class="book-details-bottom-section">
+                    <div class="book-details-summary">
+                      <p><%= @book.summary %></p>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="book-owner-title">
-                <p>Book Owner</p>
-              </div>
-              <div class="book-owner">
-                <div class="owner-avatar-box">
-                  <%= cl_image_tag @book.user.picture, class: "owner-avatar", height: 60, width: 60, crop: :fill%>
-                  <div class="owner-name">
+                <div class="book-owner-title">
+                  <p>Book Owner</p>
+                </div>
+                <div class="book-owner">
+                  <div class="owner-avatar-box">
+                    <%= cl_image_tag @book.user.picture, class: "owner-avatar", height: 60, width: 60, crop: :fill%>
+                    <div class="owner-name">
                       <p><%= @book.user.name %></p>
+                    </div>
                   </div>
-                </div>
-                <div class="book-owner-details">
+                  <div class="book-owner-details">
                     <div class="owner-bio">
                       <p><%= @book.user.owner_bio %></p>
                     </div>
+                  </div>
                 </div>
-              </div>
 
+              </div>
             </div>
           </div>
+
+          <div class="book-booking">
+            <%= render 'formdate', booking: @booking %>
+          </div>
+
         </div>
 
-      <div class="book-booking">
-          <%= render 'formdate', booking: @booking %>
       </div>
-
-  </div>
-
-</div>
 

@@ -1,6 +1,6 @@
 #map {
   flex: 0 0 450px;
-  height: 100vh;
+  height: 100vh !important;
   position: sticky !important;
   top: 0 !important;
   // background-image: url("https://i.pinimg.com/originals/69/8d/28/698d28ecd47c80b14061ac0e8ca814c9.jpg");
@@ -9,3 +9,5 @@
 .content {
   display: flex;
 }
+
+
