@@ -8,6 +8,7 @@ gem 'cloudinary'
 # Install Gem Devise
 gem 'devise'
 gem 'pg_search'
+gem 'kaminari'
 
 gem "geocoder"
 
