@@ -1,20 +1,13 @@
 <div class="banner-booking" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('https://images.pexels.com/photos/33283/stack-of-books-vintage-books-book-books.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');">
   <div class="banner-content">
-    <h1>Dear, <%= current_user.name %>, we want to thank you for the booking of <%= @booking.book.title %> </h1>
-    <p> ENJOY <i class="far fa-smile"></i> </p>
+    <h1>Dear, <%= current_user.name %>, you've just booked <%= @booking.book.title %> </h1>
+    <br>
+    <h1>Your booking starts on <%=  @booking.date_begin.day %>/<%= @booking.date_begin.month %>/<%= @booking.date_begin.year%></h1>
+    <h1>for a duration of <%=  (@booking.date_end - @booking.date_begin).to_i %> day(s)</h1>
+    <h1>Total price : <%= @book.price * (@booking.date_end - @booking.date_begin).to_i    %> €</h1>
+    <br>
+    <%= link_to 'Back', books_path, class:"btn btn-primary back" %>
   </div>
-</div>
-
-
-<div class="container text-center">
-  <div class="validation-box">
-    <p> Your booking starts on <%=  @booking.date_begin.day %> / <%= @booking.date_begin.month %>
-      / <%= @booking.date_begin.year %>
-    </p>
-    <p> for a duration of <%=  (@booking.date_end - @booking.date_begin).to_i %> day(s)</p>
-    <p>Total price : <%= @book.price * (@booking.date_end - @booking.date_begin).to_i    %> €</p>
-  </div>
-<%= link_to 'Back', books_path %>
 </div>
 
 
